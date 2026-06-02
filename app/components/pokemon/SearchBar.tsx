@@ -2,7 +2,7 @@
 
 import Form from 'next/form';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export function SearchBar({
   defaultValue,
@@ -15,10 +15,6 @@ export function SearchBar({
 }) {
   const [value, setValue] = useState(defaultValue ?? '');
   const isValid = value.trim().length > 0;
-
-  useEffect(() => {
-    setValue(defaultValue ?? '');
-  }, [defaultValue]);
 
   return (
     <Form

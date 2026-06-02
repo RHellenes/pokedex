@@ -13,7 +13,7 @@ async function SearchBarWithQuery({
   const { pokemon } = await searchParams;
   const queried = Array.isArray(pokemon) ? pokemon[0] : pokemon;
 
-  return <SearchBar defaultValue={queried} />;
+  return <SearchBar key={queried ?? ''} defaultValue={queried} />;
 }
 
 export default function Home({
